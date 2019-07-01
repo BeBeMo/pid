@@ -3,13 +3,16 @@
 #include <dirent.h>  
 #include <stdlib.h>  
 #include <string.h>  
-  
+#if defined(__linux__)  
+  #include <unistd.h>   //readlink
+#endif
+
 int find_pid_by_name( char* ProcName, int* foundpid)  
 {  
     DIR *dir;  
-    struct dirent   *d;  
+    struct dirent *d;  
     int pid, i = 0;  
-    char            *s;  
+    char *s;  
     int pnlen;  
     foundpid[0] = 0;  
     pnlen = strlen(ProcName);  
