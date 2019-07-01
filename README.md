@@ -1,3 +1,7 @@
+pid
+===
+Input program name ,and you will get program id.
+
 ### Usage
 * step1:
 ```
@@ -10,12 +14,11 @@ cc	-o	pid	pid.o
 ```
 * step2
 ```
-./pid
+./pid node
 ```
 response:
 ```
-Usage ./pid procname
+2676
 ```
 
 
-memo：The result has a question, expected 'pid' do not output. You need retest it.
