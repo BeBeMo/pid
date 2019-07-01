@@ -1,2 +1,7 @@
 pid
 ===
+### Usage
+```
+make
+./pid
+```
