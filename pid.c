@@ -1,5 +1,5 @@
 #include <stdio.h>  
-#include <sys/types.h>  
+#include <sys/types.h>  // definition of pid_t type, but in this project , we do not use pid_t type .
 #include <dirent.h>  
 #include <stdlib.h>  
 #include <string.h>  
@@ -61,7 +61,8 @@ int find_pid_by_name( char* ProcName, int* foundpid)
       closedir(dir);  
       return  0;  
 }  
-     
+
+// main function, usage example: ./pid firefox , then output firefox pid.
 int main(int argc, char *argv[])  
 {  
     int i, rv, pid_t[128];  
